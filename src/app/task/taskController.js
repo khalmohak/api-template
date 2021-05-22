@@ -1,11 +1,5 @@
 let pool = require('../lib/database').connection;
 const common = require('../lib/database');
-const parseJson = require('parse-json');
-const http = require("https");
-const moment = require("moment");
-const jwt = require("jsonwebtoken");
-const isEmpty = require('is-empty');
-const mailer = require('nodemailer');
 require('body-parser');
 
 const sampleFunction = async (req, res) => {

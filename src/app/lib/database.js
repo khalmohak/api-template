@@ -8,13 +8,6 @@ const connectionString = {
 	password: ''
 };
 
-const tempConnectionString = {
-	host: '',
-	port: 5432,
-	database: '',
-	user: '',
-	password: ''
-};
 
 module.exports = {
 	//Connection String used by Massive to connect to the database

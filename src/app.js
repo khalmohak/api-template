@@ -7,10 +7,10 @@ const expressSanitizer = require('express-sanitizer');
 const helmet = require('helmet');
 const cors = require('cors');
 const admin = require('firebase-admin');
-const serviceAccount = require('./app/firebaseKey.json');
+//const serviceAccount = require('./app/firebaseKey.json');
 const massive = require('massive');
 const app = express();
-const verifyToken = authentication.verifyToken;
+//const verifyToken = authentication.verifyToken;
 
 /**
  * Applying Middleware
@@ -21,11 +21,7 @@ function applyMiddleware() {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(helmet());
-    app.use(session({
-        secret: common.session_key,
-        resave: true,
-        saveUninitialized: false
-    }));
+    
 }
 
 /**
@@ -42,13 +38,13 @@ function initializingDatabase() {
 /**
  * Initializing Firebase admin with the respective database
  */
-function initializingApp() {
-    admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount),
-        databaseURL: "https://cyndi-admin.firebaseio.com"
-    });
-    app.set('firebaseAdmin', admin);
-}
+// function initializingApp() {
+//     admin.initializeApp({
+//         credential: admin.credential.cert(serviceAccount),
+//         databaseURL: "https://cyndi-admin.firebaseio.com"
+//     });
+//     app.set('firebaseAdmin', admin);
+// }
 
 /**
  * Other Routes here
@@ -60,7 +56,7 @@ function initializingApp() {
 
 applyMiddleware()
 initializingDatabase();
-initializingApp();
+//initializingApp();
 
 
 
