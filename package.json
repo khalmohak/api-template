@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/app.js",
-    "build":"babel src/app.js --out-file dist/app-compiled.js"
+    "start": "nodemon --exec babel-node app.js",
+    "build":"babel app.js --out-file dist/app-compiled.js"
   },
   "author": "Mohak Gupta",
   "license": "ISC",

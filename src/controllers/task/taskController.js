@@ -1,5 +1,4 @@
-let pool = require('../lib/database').connection;
-const common = require('../lib/database');
+import {connection} from '../../lib/database';
 require('body-parser');
 
 const sampleFunction = async (req, res) => {
